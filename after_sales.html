@@ -14,14 +14,14 @@
   	<link rel="stylesheet" href="assets/css/swiper.min.css">
   	<link rel="stylesheet" href="css/style.css">
   	<script src="assets/js/jquery.min.js"></script>
+  	<script src="assets/js/jquery.mousewheel.js"></script>
   	<script src="assets/js/common.js"></script>
   	<script src="assets/js/swiper.min.js"></script>
   	<script src="assets/js/jquery.SuperSlide.2.1.1.js"></script>
 </head>
 <body>
 	<!--common start-->
-	<!--pc header↓-->
-	<div class="header am-show-lg-only">
+	<div class="header am-show-lg-only pc_header">
 		<div class="am-container header-coctainer am-cf">
 			<h1 class="logo am-fl">
 				<a href="#" class="am-block">
@@ -29,6 +29,7 @@
 				</a>
 			</h1>
 			<div class="nav">
+				
 				<ul class="am-cf nav_list">
 					<!--选中效果↓-->
 					<li class="active">
@@ -46,7 +47,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -69,7 +70,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -88,7 +89,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 公司新闻</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -109,7 +110,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 产品手册</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -131,7 +132,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 发展历程</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -147,11 +148,16 @@
 			
 			<div class="header_aside am-fr">
 				<a href="#" class="sina"></a>
-				<a href="#" class="wechat"></a>
+				<a href="#" class="wechat">
+					<span class="ewm am-show-lg-only">
+						<img src="images/ewm_06.jpg" class="am-img-responsive" alt="" />
+					</span>
+				</a>
 				<a href="#" class="en"></a>
 			</div>
 		</div>
 	</div>
+	<div class="header_none am-show-lg-only"></div>
 	
 	<!--moible header↓-->
 	<div data-am-widget="header" class="am-header am-hide-lg-only" data-am-sticky>
@@ -304,7 +310,7 @@
 				<ul class="column_nav am-cf am-text-center am-show-lg-only">
 					<li class="am-fl">
 						<a href="#" class="am-block" style="background-image:url(images/cpsc.png);">
-							产品手册下载
+							产品手册
 						</a>
 					</li>
 					<li class="am-fl on">
@@ -380,15 +386,8 @@
 				<div class="sub">
 					<h4>服务支持</h4>
 					<ul>
-						<!--这个栏目比较特殊，选中需要另外加一个rotate类名-->
-						<li class="on rotate">
+						<li>
 							<a href="##" class="am-block"><i class="am-icon-angle-left"></i> &nbsp;&nbsp;售后政策</a>
-							<div class="third">
-								<a href="#" class="am-block">售后服务流程</a>
-								<a href="#" class="am-block active">退换货政策</a>
-								<a href="#" class="am-block">免费保修服务</a>
-								<a href="#" class="am-block">付费维修服务</a>
-							</div>
 						</li>
 						<li><a href="#" class="am-block"><i class="am-icon-angle-left"></i> &nbsp;&nbsp;常见问题</a></li>
 						<li><a href="#" class="am-block"><i class="am-icon-angle-left"></i> &nbsp;&nbsp;软件下载</a></li>

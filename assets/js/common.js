@@ -5,8 +5,25 @@ $(function(){
 		$(this).find(".submain").addClass("am-animation-fade");
 	},function(){
 		$(this).removeClass("on");
-		//$(this).find(".submain").removeClass("am-animation-fade");
 	})
+	
+	//头部滚轮监听
+	//产品列表自动返回顶部头部显示不出来bug修复
+	$(window).scroll(function(){
+		if($(window).scrollTop()<20){
+			$('.pc_header').removeClass("hide_header").addClass("show_header");
+		}
+	})
+	
+	$(window).bind('mousewheel', function(event, delta){
+		var dir = delta > 0 ? 'Up' : 'Down';
+		if (dir == 'Up') {
+			$('.pc_header').removeClass("hide_header").addClass("show_header")
+		} else {
+			$('.pc_header').removeClass("show_header").addClass("hide_header")
+		}
+	});
+	
 	
 	$(".nav_list .submain").hover(function(){
 		$(this).addClass("on am-animation-fade");
@@ -41,10 +58,11 @@ $(function(){
 	var swiper = new Swiper('.product_content .swiper-container', {
 	    nextButton: '.swiper-button-next',
 	    prevButton: '.swiper-button-prev',
-	    slidesPerView: 3,
+	    slidesPerView: 2,
 	    paginationClickable: true,
-	    spaceBetween: 10,
-	    loop:true
+	    spaceBetween: 30,
+	    loop:true,
+	    autoplay:5000
 	});
 	
 	//产品轮播mobile
@@ -53,12 +71,13 @@ $(function(){
         paginationClickable: true,
         spaceBetween: 10,
         loop:true
-    });
+   });
 	
     //底部二维码
-    $(".look_wechat").click(function(){
-    	var Oewm=$(".foot_wechat .ewm_box");
-    	Oewm.hasClass("on") ? Oewm.removeClass("on") : Oewm.addClass("on");
+    $(".look_wechat").hover(function(){
+    	$(".foot_wechat .ewm_box").addClass("on");
+    },function(){
+    	$(".foot_wechat .ewm_box").removeClass("on");
     })
     
     //栏目页最新产品
@@ -91,17 +110,11 @@ $(function(){
         }
     });
     
-    //app下载二维码切换
-    $("#download_box a").mouseover(function(){
-		$("#ewm").attr("src",$(this).attr("imgurl"));
-	})
     
     //服务页面图片切换
     $(".service .change").on('click mouseover', function(){
     	$(".c_img").attr("src",$(this).attr("imgurl"));
     })
-    
-    
     
     //产品列表悬浮
     $(window).scroll(function(){
@@ -112,6 +125,12 @@ $(function(){
     	$(".aside_list").addClass("show");
     },function(){
     	$(".aside_list").removeClass("show");
+    })
+    
+    $(".product_list .toTop,.phone_list").hover(function(){
+    	$(".phone_list").addClass("show");
+    },function(){
+    	$(".phone_list").removeClass("show");
     })
 })
 

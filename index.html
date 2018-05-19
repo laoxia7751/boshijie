@@ -14,14 +14,16 @@
   	<link rel="stylesheet" href="assets/css/swiper.min.css">
   	<link rel="stylesheet" href="css/style.css">
   	<script src="assets/js/jquery.min.js"></script>
+  	<script src="assets/js/jquery.mousewheel.js"></script>
   	<script src="assets/js/common.js"></script>
   	<script src="assets/js/swiper.min.js"></script>
   	<script src="assets/js/jquery.SuperSlide.2.1.1.js"></script>
+  	<script src="assets/js/easing.js"></script>
 </head>
 <body>
 	<!--common start-->
 	<!--pc header↓-->
-	<div class="header am-show-lg-only">
+	<div class="header am-show-lg-only pc_header">
 		<div class="am-container header-coctainer am-cf">
 			<h1 class="logo am-fl">
 				<a href="#" class="am-block">
@@ -47,7 +49,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -70,7 +72,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -89,7 +91,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 公司新闻</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -110,7 +112,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 产品手册</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -132,7 +134,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 发展历程</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -157,6 +159,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="header_none am-show-lg-only"></div>
 	
 	<!--mobile header↓-->
 	<div data-am-widget="header" class="am-header am-hide-lg-only" data-am-sticky>
@@ -353,37 +356,33 @@
 			</div>
 			<div class="product_content">
 				<!--pc产品轮播↓-->
-				<div class="swiper-container am-show-lg-only">
-			        <div class="swiper-wrapper">
-			            <div class="swiper-slide">
-			            	<a href="#" class="am-block">
-			            		<div class="title">风控系列</div>
-			            		<div class="description">GPS定位追踪器</div>
-			            		<span class="am-block">
-			            			<img src="images/pro1.png" alt="" />
-			            		</span>
-			            	</a>
-			            </div>
-			            <div class="swiper-slide">
-			            	<a href="#" class="am-block">
-			            		<div class="title">风控系列</div>
-			            		<div class="description">GPS定位追踪器</div>
-			            		<span class="am-block">
-			            			<img src="images/pro1.png" alt="" />
-			            		</span>
-			            	</a>
-			            </div>
-			            <div class="swiper-slide">
-			            	<a href="#" class="am-block">
-			            		<div class="title">风控系列</div>
-			            		<div class="description">GPS定位追踪器</div>
-			            		<span class="am-block">
-			            			<img src="images/pro1.png" alt="" />
-			            		</span>
-			            	</a>
-			            </div>
-			        </div>
-			        <!-- Add Navigation -->
+				<div class="pc_product_show am-show-lg-only">
+					<div class="swiper-container" data-am-scrollspy="{animation:'slide-bottom', delay: 500, repeat: false}">
+				        <div class="swiper-wrapper">
+				            <div class="swiper-slide">
+				            	<a href="#" class="am-block">
+				            		<span class="am-block">
+				            			<img src="images/pro1.png" alt="" />
+				            		</span>
+				            	</a>
+				            </div>
+				            <div class="swiper-slide">
+				            	<a href="#" class="am-block">
+				            		<span class="am-block">
+				            			<img src="images/pro1.png" alt="" />
+				            		</span>
+				            	</a>
+				            </div>
+				            <div class="swiper-slide">
+				            	<a href="#" class="am-block">
+				            		<span class="am-block">
+				            			<img src="images/pro1.png" alt="" />
+				            		</span>
+				            	</a>
+				            </div>
+				        </div>
+				    </div>
+				    <!-- Add Navigation -->
 			        <div class="swiper-button-prev swiper-button-white"></div>
 			        <div class="swiper-button-next swiper-button-white"></div>
 			    </div>
@@ -435,33 +434,54 @@
 			</div>
 		</div>
 		<!--product_center end-->
+		
 		<!--about us start-->
 		<div class="about_us"  data-am-scrollspy="{animation:'fade',repeat: false}">
 			<div class="am-container">
-				<h2 class="title am-text-center" data-am-scrollspy="{animation:'slide-bottom', delay: 300, repeat: false}">关于我们</h2>
-				<ul class="num_list am-avg-sm-3 am-avg-md-3">
+				<h2 class="title am-text-center btn" data-am-scrollspy="{animation:'slide-bottom', delay: 300, repeat: false}">关于我们</h2>
+				<ul class="num_list am-avg-sm-3">
 					<li>
-						<div class="am-inline-block" data-am-scrollspy="{animation:'slide-bottom', delay: 300, repeat: false}">
-							<span class="am-block">
-								<img src="images/index_num1.png" class="am-img-responsive" alt="" />
-							</span>
-							<p class="am-text-center">页面访问量</p>
+						<div class="count">
+							<div class="num_box num1">
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						   </div>
+							<div class="" data-am-scrollspy="{animation:'slide-bottom', delay: 300, repeat: false}">
+								<p class="am-text-center">页面访问量</p>
+							</div>
 						</div>
 					</li>
 					<li>
-						<div class="am-inline-block"  data-am-scrollspy="{animation:'slide-bottom', delay: 500, repeat: false}">
-							<span class="am-block">
-								<img src="images/index_num2.png" class="am-img-responsive" alt="" />
-							</span>
-							<p class="am-text-center">独立访问客</p>
+						<div class="count">
+							<div class="num_box num2">
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						   	</div>
+							<div class="" data-am-scrollspy="{animation:'slide-bottom', delay: 300, repeat: false}">
+								<p class="am-text-center">独立访问客</p>
+							</div>
 						</div>
 					</li>
 					<li>
-						<div class="am-inline-block" data-am-scrollspy="{animation:'slide-bottom', delay: 700, repeat: false}">
-							<span class="am-block">
-								<img src="images/index_num3.png" class="am-img-responsive" alt="" />
-							</span>
-							<p class="am-text-center">客户共同信赖</p>
+						<div class="count">
+							<div class="num_box num3">
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						      	<div class="num"></div>
+						   	</div>
+							<div class="" data-am-scrollspy="{animation:'slide-bottom', delay: 300, repeat: false}">
+								<p class="am-text-center">客户共同信赖</p>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -527,7 +547,7 @@
 				</div>
 				
 				<div class="content am-cf">
-					<div class="l am-fl">
+					<div class="l am-fl"  data-am-scrollspy="{animation:'slide-left', delay: 300, repeat: false}">
 						<a href="#" class="am-block">
 							<span class="am-block img">
 								<img src="images/news_exp_13.jpg" alt="" />
@@ -541,25 +561,25 @@
 					</div>
 					<div class="r am-fl">
 						<ul>
-							<li>
+							<li data-am-scrollspy="{animation:'slide-right', delay: 300, repeat: false}">
 								<a href="#" class="am-block">
 									<p><span>新闻</span>丨<span>2018-03-20</span></p>
 									<h5>未接入联网联控平台、恶意屏蔽GPS 沪20家“危运”企业被约谈</h5>
 								</a>
 							</li>
-							<li>
+							<li data-am-scrollspy="{animation:'slide-right', delay: 300, repeat: false}">
 								<a href="#" class="am-block">
 									<p><span>新闻</span>丨<span>2018-03-20</span></p>
 									<h5>北斗定位、GPS定位、WiFi定位、基站定位、蓝牙定位几种定位方式比较</h5>
 								</a>
 							</li>
-							<li>
+							<li data-am-scrollspy="{animation:'slide-right', delay: 300, repeat: false}">
 								<a href="#" class="am-block">
 									<p><span>新闻</span>丨<span>2018-03-20</span></p>
 									<h5>校车装上GPS、用上大数据，家长可实时查看</h5>
 								</a>
 							</li>
-							<li>
+							<li data-am-scrollspy="{animation:'slide-right', delay: 300, repeat: false}">
 								<a href="#" class="am-block">
 									<p><span>新闻</span>丨<span>2018-03-20</span></p>
 									<h5>摩拜单车全面支持“北斗+GPS+格洛纳斯”三模卫星定位</h5>
@@ -653,7 +673,45 @@
 		</div>
 	</div>
 	<!--footer end-->
-
+<script>
+	$(function(){
+		var keep=true;
+		$(window).scroll(function(){ 
+	        if($(window).height()+$(this).scrollTop()>$(".num_list").offset().top && keep==true){  
+	        	var isBegin = false;
+	    		numUp($(".num1 .num"),500000,isBegin);
+				numUp($(".num2 .num"),800000,isBegin);
+				numUp($(".num3 .num"),30000,isBegin);
+				keep=false;
+	        } 
+	   });
+	    
+	    function numUp(obj,result,isBegin){
+	    	if(isBegin) return false;
+	    	isBegin = true;
+			var u = 73;
+			$(obj).css('backgroundPositionY',0);
+			var num_arr = (result+'').split('');
+			$(obj).each(function(index){
+				var _num = $(this);
+				setTimeout(function(){
+					_num.animate({ 
+						backgroundPositionY: (u*30) - (u*num_arr[index])
+					},{
+						duration: 6000+index*100,
+						easing: "easeInOutCirc",
+						complete: function(){
+							if(index==3) isBegin = false;
+						}
+					});
+				}, index * 50)
+			})
+		}
+	})
+	
+	//数字滚动
+    
+</script>
 
 <!--[if lte IE 8 ]>
 <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>

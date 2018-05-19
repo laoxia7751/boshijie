@@ -14,6 +14,7 @@
   	<link rel="stylesheet" href="assets/css/swiper.min.css">
   	<link rel="stylesheet" href="css/style.css">
   	<script src="assets/js/jquery.min.js"></script>
+  	<script src="assets/js/jquery.mousewheel.js"></script>
   	<script src="assets/js/common.js"></script>
   	<script src="assets/js/swiper.min.js"></script>
   	<script src="assets/js/jquery.SuperSlide.2.1.1.js"></script>
@@ -21,7 +22,7 @@
 <body>
 	<!--common start-->
 	<!--pc header↓-->
-	<div class="header am-show-lg-only">
+	<div class="header am-show-lg-only pc_header">
 		<div class="am-container header-coctainer am-cf">
 			<h1 class="logo am-fl">
 				<a href="#" class="am-block">
@@ -47,7 +48,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -70,7 +71,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -89,7 +90,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 公司新闻</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -110,7 +111,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 产品手册</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -132,7 +133,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 发展历程</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -148,12 +149,16 @@
 			
 			<div class="header_aside am-fr">
 				<a href="#" class="sina"></a>
-				<a href="#" class="wechat"></a>
+				<a href="#" class="wechat">
+					<span class="ewm am-show-lg-only">
+						<img src="images/ewm_06.jpg" class="am-img-responsive" alt="" />
+					</span>
+				</a>
 				<a href="#" class="en"></a>
 			</div>
 		</div>
 	</div>
-	
+	<div class="header_none am-show-lg-only"></div>
 	<!--moible header↓-->
 	<div data-am-widget="header" class="am-header am-hide-lg-only" data-am-sticky>
 		<!--返回按钮，需要时添加-->
@@ -305,7 +310,7 @@
 				<ul class="column_nav am-cf am-text-center am-show-lg-only">
 					<li class="am-fl on">
 						<a href="#" class="am-block" style="background-image:url(images/cpsc.png);">
-							产品手册下载
+							产品手册
 						</a>
 					</li>
 					<li class="am-fl">

@@ -14,14 +14,14 @@
   	<link rel="stylesheet" href="assets/css/swiper.min.css">
   	<link rel="stylesheet" href="css/style.css">
   	<script src="assets/js/jquery.min.js"></script>
+  	<script src="assets/js/jquery.mousewheel.js"></script>
   	<script src="assets/js/common.js"></script>
   	<script src="assets/js/swiper.min.js"></script>
   	<script src="assets/js/jquery.SuperSlide.2.1.1.js"></script>
 </head>
 <body>
 	<!--common start-->
-	<!--pc header↓-->
-	<div class="header am-show-lg-only">
+	<div class="header am-show-lg-only pc_header">
 		<div class="am-container header-coctainer am-cf">
 			<h1 class="logo am-fl">
 				<a href="#" class="am-block">
@@ -29,6 +29,7 @@
 				</a>
 			</h1>
 			<div class="nav">
+				
 				<ul class="am-cf nav_list">
 					<!--选中效果↓-->
 					<li class="active">
@@ -46,7 +47,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -69,7 +70,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 新兴系列</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -88,7 +89,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 公司新闻</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -109,7 +110,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 产品手册</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -131,7 +132,7 @@
 										<li><a href="#" class="am-block"><span class="am-icon-angle-right am-fl"></span> 发展历程</a></li>
 									</ul>
 								</div>
-								<div class="sub_r am-text-center">
+								<div class="sub_r am-text-right">
 									<span class="am-inline-block">
 										<img src="images/column_pic_05.jpg" class="am-img-responsive" alt="" />
 									</span>
@@ -147,11 +148,16 @@
 			
 			<div class="header_aside am-fr">
 				<a href="#" class="sina"></a>
-				<a href="#" class="wechat"></a>
+				<a href="#" class="wechat">
+					<span class="ewm am-show-lg-only">
+						<img src="images/ewm_06.jpg" class="am-img-responsive" alt="" />
+					</span>
+				</a>
 				<a href="#" class="en"></a>
 			</div>
 		</div>
 	</div>
+	<div class="header_none am-show-lg-only"></div>
 	
 	<!--moible header↓-->
 	<div data-am-widget="header" class="am-header am-hide-lg-only" data-am-sticky>
@@ -306,13 +312,18 @@
 					<p data-am-scrollspy="{animation: 'slide-bottom', delay: 500, repeat: false}">全球实时对讲&语音社交平台</p>
 					<div class="btn_box" id="download_box" data-am-scrollspy="{animation: 'slide-bottom', delay: 700, repeat: false}">
 						<!--imgurl为相应版本二维码图片路径-->
-						<a href="https://itunes.apple.com/cn/app/%E5%8D%9A%E4%BA%91%E8%BD%A6%E8%81%94v2/id1206307087?mt=8" target="_blank" imgurl="images/ewm_06.jpg" class="am-inline-block ios"><i class="am-icon-apple"></i>&nbsp;IPhone下载</a>
-						<a href="#" class="am-inline-block android" imgurl="images/ewm_16.jpg" target="_blank"><i class="am-icon-android"></i>&nbsp;Android下载</a>
-					</div>
-					<div class="ewm_box am-hide-sm" data-am-scrollspy="{animation: 'slide-bottom', delay: 900, repeat: false}">
-						<span class="am-inline-block">
-							<img src="images/ewm_06.jpg" id="ewm" alt="" />
-						</span>
+						<a href="https://itunes.apple.com/cn/app/%E5%8D%9A%E4%BA%91%E8%BD%A6%E8%81%94v2/id1206307087?mt=8" target="_blank" class="ios">
+							<i class="am-icon-apple"></i>&nbsp;IPhone下载
+							<span class="android_code">
+								<img src="images/ewm_06.jpg" alt="" />
+							</span>
+						</a>
+						<a href="#" class="android" bind="android_code" target="_blank">
+							<i class="am-icon-android"></i>&nbsp;Android下载
+							<span class="ios_code">
+								<img src="images/ewm_06.jpg" alt="" />
+							</span>
+						</a>
 					</div>
 				</div>
 			</div>
